@@ -45,7 +45,7 @@ These tests can be run using the Makefile command `make run-api-tests`. (if you'
 ## Makefile Commands
 The Makefile is intended to allow anyone who wasn't familiar with pytest to run the tests. Anyone can run these commands without the headache of setting up the environment and having to deal with a variety of commands. Below is a list of the commands you can use to run the tests.
 
-Example Makefile commands:
+Makefile commands:
 - `make install-dependencies`: Install dependencies from requirements.txt. (DO THIS FIRST!)
 - `make run-selenium-tests`: Run Selenium tests.
 - `make run-playwright-tests`: Run Playwright tests.

@@ -9,12 +9,7 @@ class Browser:
         self.browser_type = browser_type
 
     def start_browser(self):
-        if self.browser_type.lower() == 'chrome':
-            self.driver = webdriver.Chrome()
-        elif self.browser_type.lower() == 'firefox':
-            self.driver = webdriver.Firefox()
-        else:
-            raise ValueError("Unsupported browser type")
+        self.driver = webdriver.Chrome()
 
     def open(self, url):
         self.driver.get(url)

@@ -1,14 +1,13 @@
 install-dependencies:
-    pip install -r requirements.txt
+	pip install -r requirements.txt
 
 run-selenium-tests:
-    pytest selenium/tests
+	pytest -k test_login.py
 
 run-playwright-tests:
-    pytest playwright/tests
+	pytest -k test_challenges.py --headed
 
 run-api-tests:
-    pytest api/tests
+	pytest -k test_api.py 
 
 run-all-tests: run-selenium-tests run-playwright-tests run-api-tests
-

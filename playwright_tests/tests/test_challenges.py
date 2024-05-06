@@ -22,10 +22,14 @@ class TestChallenges:
 
     def test_load_delay_challenge(self, page: Page):
         """
-        Comments
+        This test is challenged with waiting for an element to load. It is common for there
+        to be a delay when content is loading which forces the test to wait for the element to load.
+        This test displays how easy playwright handles this challenge.
         """
 
         page.get_by_role("link", name="Load Delay").click()
+
+        # Click on the button that appears after a delay (Built in wait & verifications)
         page.get_by_role("button", name="Button Appearing After Delay").click()
 
     def test_text_input_challenge(self, page: Page):

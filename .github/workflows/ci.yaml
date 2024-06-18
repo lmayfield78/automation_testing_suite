@@ -23,5 +23,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxss1 libappindicator1 libindicator7
+
       - name: Run tests
         run: make run-all-tests

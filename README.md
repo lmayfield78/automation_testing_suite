@@ -42,6 +42,11 @@ The api tests are located in the `api_tests/tests` directory. It includes a `con
 
 These tests can be run using the Makefile command `make run-api-tests`. (if you're not familiar with pytest)
 
+### CI / Github actions Runs
+There are two continuious integration runs set up for this repository. 
+1) When there is a merge into main
+2) A nightly run that runs at 1 am Monday through Friday
+
 ## Makefile Commands
 The Makefile is intended to allow anyone who wasn't familiar with pytest to run the tests. Anyone can run these commands without the headache of setting up the environment and having to deal with a variety of commands. Below is a list of the commands you can use to run the tests.
 

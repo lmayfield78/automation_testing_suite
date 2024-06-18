@@ -1,3 +1,6 @@
 /venv
 __pycache__/
 test_basics.py
+
+# Ignore macOS system files
+.DS_Store

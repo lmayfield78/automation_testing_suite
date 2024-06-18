@@ -1,8 +1,9 @@
 name: Nightly Tests
 
-on:
-  schedule:
-    - cron: '0 1 * * 1-5'  # will run at 1 AM, Monday through Friday
+# on:
+#   schedule:
+#     - cron: '0 1 * * 1-5'  # will run at 1 AM, Monday through Friday
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -21,10 +22,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Install Chrome dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libxss1 libappindicator1 libindicator7
+      - name: Setup Google Chrome and ChromeDriver
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+          install-chromedriver: true
+          install-dependencies: true
 
       - name: Run tests
         run: make run-all-tests

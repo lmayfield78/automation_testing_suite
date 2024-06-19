@@ -2,7 +2,7 @@ install-dependencies:
 	pip install -r requirements.txt
 
 run-selenium-tests:
-	pytest -k test_login.py
+	pytest -m selenium
 
 run-playwright-tests:
 	pytest -k test_challenges.py --headed

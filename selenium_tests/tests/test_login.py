@@ -1,6 +1,7 @@
 import pytest
 from .pages.LoginPage import LoginPage
 
+pytestmark = pytest.mark.selenium
 
 class TestLogin:
     @pytest.fixture(autouse=True)

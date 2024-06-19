@@ -4,16 +4,16 @@ from .pages.ecommercePages import EcommerceStore
 
 pytestmark = pytest.mark.selenium
 
-class TestEndToEndEcommerce:
+class TestSeleniumEndToEndEcommerce:
     @pytest.fixture(autouse=True)
     def setup(self, browser):
         self.browser = browser
         self.browser.open("https://www.saucedemo.com/")
 
-    def test_store_happy_path(self, browser):
+    def test_selenium_store_happy_path(self, browser):
         """ 
         This test will verify the very basic end to end happy path testing.
-        From login to selection to checkout
+        From login to selection to checkout done in Selenium
         """
 
         # Create an instance of the LoginPage class

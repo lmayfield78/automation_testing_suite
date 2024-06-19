@@ -5,7 +5,7 @@ run-selenium-tests:
 	pytest -m selenium
 
 run-playwright-tests:
-	pytest -k test_challenges.py --headed
+	pytest -k playwright $(if $(HEADLESS),,--headed)
 
 run-api-tests:
 	pytest -k test_api.py 

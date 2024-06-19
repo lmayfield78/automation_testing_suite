@@ -1,8 +1,8 @@
 name: Nightly Tests
 
-# on:
-#   schedule:
-#     - cron: '0 1 * * 1-5'  # will run at 1 AM, Monday through Friday
+on:
+  schedule:
+    - cron: '0 1 * * 1-5'  # will run at 1 AM, Monday through Friday
 
 jobs:
   test:

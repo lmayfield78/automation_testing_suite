@@ -25,6 +25,8 @@ The automated test sections below will include the details and the reasoning of 
 ### Selenium Tests
 The selenium tests are located in the `selenium_tests/tests` directory. It includes a `pages` directory for the page objects and a `tests` directory for the tests as well as `conftest.py` file that is used to facilitate the pytest runner. The utils directory houses a `browser_utils.py` file that is used to show the helper functions that are used to run the tests.
 
+Update: Added a end-to-end ecommerce test
+
 Note: I attempted to design the selenium tests in this way to showcase how the tests can be streamlined for better readability and maintainability. I don't use sleeps and I don't like using hard to read locators. I find Selenium's default options can be a bit cumbersome to work with and I prefer to keep the tests as readable as possible.
 
 These tests can be run using the Makefile command `make run-selenium-tests`. (if you're not familiar with pytest)
@@ -33,6 +35,8 @@ These tests can be run using the Makefile command `make run-selenium-tests`. (if
 The playwright tests are located in the `playwright_tests/tests` directory. It does not includes `tests` directory for the tests as well as `conftest.py` file that is used to facilitate the pytest runner(nothing active in it now). There is no page object directory because the tests are so simple that they don't need it. I believe Playwright is a more efficient automation tool than its competitors because it has many of its assertion features built into each of its functions.
 
 These tests are simple tests that I believe cover some of the challenges of automated testing. I chose of a few of the automation challenges that are common in the industry and wanted to display how easily playwright handles them. 
+
+Update: Added a end-to-end ecommerce test
 
 These tests can be run using the Makefile command `make run-playwright-tests`. (if you're not familiar with pytest)
 

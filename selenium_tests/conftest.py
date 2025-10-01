@@ -7,6 +7,9 @@ def pytest_addoption(parser):
 @pytest.fixture(scope="session")
 def browser(request):
     browser_type = request.config.getoption("--browser")
+    # Handle case where browser_type might be a list
+    if isinstance(browser_type, list):
+        browser_type = browser_type[0] if browser_type else 'chrome'
     browser_instance = Browser(browser_type)
     browser_instance.start_browser()
     yield browser_instance

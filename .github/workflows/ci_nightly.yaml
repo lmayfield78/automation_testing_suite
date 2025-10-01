@@ -1,8 +1,8 @@
 name: Nightly Tests
 
-# on:
-#   schedule:
-#     - cron: '0 1 * * 1-5'  # will run at 1 AM, Monday through Friday
+on:
+  schedule:
+    - cron: '0 1 * * 1-5'  # will run at 1 AM, Monday through Friday
 
 jobs:
   test:
@@ -10,24 +10,20 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Setup Google Chrome and ChromeDriver
-        uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: stable
-          install-chromedriver: true
-          install-dependencies: true
+      - name: Install Playwright Browsers
+        run: python3 -m playwright install --with-deps
 
       - name: Run tests
         run: make run-all-tests

@@ -1,13 +1,13 @@
 install-dependencies:
-	pip install -r requirements.txt
+	pip3 install -r requirements.txt
 
 run-selenium-tests:
-	pytest -m selenium
+	python3 -m pytest -m selenium --pdb $(if $(HEADLESS),HEADLESS=$(HEADLESS),)
 
 run-playwright-tests:
-	pytest -k playwright $(if $(HEADLESS),,--headed)
+	python3 -m pytest -k playwright $(if $(HEADLESS),,--headed)
 
 run-api-tests:
-	pytest -k test_api.py 
+	python3 -m pytest -k test_api.py 
 
 run-all-tests: run-selenium-tests run-playwright-tests run-api-tests

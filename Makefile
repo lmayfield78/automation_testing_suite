@@ -20,4 +20,4 @@ run-typescript-tests:
 
 run-all-tests: run-selenium-tests run-playwright-tests run-api-tests
 
-run-all-tests-with-typescript: run-selenium-tests run-playwright-tests run-api-tests run-typescript-tests
+run-all-tests-including-typescript: run-selenium-tests run-playwright-tests run-api-tests run-typescript-tests

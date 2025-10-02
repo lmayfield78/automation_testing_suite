@@ -1,12 +1,13 @@
 name: Run Tests on Merge
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+# CI/CD disabled for portfolio demonstration
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
 
 jobs:
   test:

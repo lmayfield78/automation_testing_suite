@@ -11,7 +11,7 @@ cd automation_testing_suite
 make install-all-dependencies
 
 # Run everything
-make run-all-tests-with-typescript
+make run-all-tests-including-typescript
 
 # Expect: Browser windows opening, tests running, results displayed
 # Observe: E-commerce flows, API calls, automation challenges across 4 different frameworks
@@ -64,7 +64,7 @@ make install-all-dependencies
 make run-all-tests
 
 # Run all tests including TypeScript
-make run-all-tests-with-typescript
+make run-all-tests-including-typescript
 ```
 
 ## 📁 Project Structure
@@ -133,7 +133,7 @@ npm run test:debug         # Debug mode
 make install-all-dependencies
 
 # Run all tests
-make run-all-tests-with-typescript
+make run-all-tests-including-typescript
 ```
 
 ## 🎯 Key Strengths

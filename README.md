@@ -8,6 +8,8 @@ A comprehensive automation testing framework showcasing multiple technologies an
 # Clone and setup
 git clone <repository-url>
 cd automation_testing_suite
+
+# Install dependencies (requires 'make' - install with: brew install make, apt install make, or choco install make)
 make install-all-dependencies
 
 # Run everything
@@ -16,6 +18,8 @@ make run-all-tests-including-typescript
 # Expect: Browser windows opening, tests running, results displayed
 # Observe: E-commerce flows, API calls, automation challenges across 4 different frameworks
 ```
+
+**No make?** See [Running Tests](#-running-tests) section for manual commands.
 
 ## 🚀 Quick Start
 

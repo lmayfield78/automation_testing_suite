@@ -9,7 +9,7 @@ A comprehensive automation testing framework showcasing multiple technologies an
 git clone <repository-url>
 cd automation_testing_suite
 
-# Install dependencies (requires 'make' - install with: brew install make, apt install make, or choco install make)
+# Install dependencies (requires 'make' - macOS: usually pre-installed, Linux: apt install make, Windows: choco install make)
 make install-all-dependencies
 
 # Run everything
